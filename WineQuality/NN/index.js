@@ -16,7 +16,7 @@ async function runExample(){
     x[9] = document.getElementById('box10').value;
     x[10] = document.getElementById('box11').value;
 
-    let tensorX =new onnx.Tensor(x,'float32', [1,11];
+    let tensorX =new onnx.Tensor(x,'float32', [1,11]);
 
     let session = new onnx.InferenceSession();
 

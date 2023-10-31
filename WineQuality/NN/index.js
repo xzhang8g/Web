@@ -2,7 +2,7 @@
 async function runExample(){
 
 
-    var x = new Float32Array(1,11)
+    var x = [];
 
     x[0] = document.getElementById('box1').value;
     x[1] = document.getElementById('box2').value;
@@ -26,7 +26,7 @@ async function runExample(){
 
     let predictions = document.getElementById('predictions');
 
-predictions.innerHTML = `<hr> Got an output tensor with values: <hr/>
+    predictions.innerHTML = `<hr> Got an output tensor with values: <hr/>
 
 <table>
     <tr>

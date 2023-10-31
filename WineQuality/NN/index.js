@@ -21,12 +21,23 @@ async function runExample(){
     let session = new onnx.InferenceSession();
 
     await session.loadModel("./DLnet_WineData.onnx")
-    let outputMap = await session.run([tensor]);
+    let outputMap = await session.run([tensorX]);
     let outputSata =outputMap.get('output1');
 
     let predictions = document.getElementById('predictions');
 
+predictions.innerHTML = `<hr> Got an output tensor with values: <br/>
 
+<table>
+    <tr>
+        <td> Rating of Wine Quality  </td>
+        <td id="td0"> ${outputData.data[0].toFixed(2)   </td>
+    </tr)
+
+</table>
+
+
+`;
                                
 
   

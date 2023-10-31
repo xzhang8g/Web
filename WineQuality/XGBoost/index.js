@@ -28,12 +28,12 @@ let result = await session. run (feeds);
     outputData = parseFloat(outputData). toFixed(2)
     let predictions = document.getElementById('predictions');
 
-    predictions.innerHTML = `<hr> Got an output tensor with values: <br/>
+predictions.innerHTML = `<hr> Got an output tensor with values: <br/>
 
 <table>
     <tr>
         <td> Rating of Wine Quality  </td>
-        <td id="td0"> ${outputData.data[0].toFixed(2)}   </td>
+        <td id="td0"> ${outputData}   </td>
     </tr)
 
 </table>`;

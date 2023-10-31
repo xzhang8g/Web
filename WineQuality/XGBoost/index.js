@@ -1,6 +1,8 @@
 
 async function runExample(){
 
+    var x = new Float32Array (1,11)
+
 
     var x = [];
 
@@ -16,7 +18,7 @@ async function runExample(){
     x[9] = document.getElementById('box10').value;
     x[10] = document.getElementById('box11').value;
 
-    let tensorX =new ort.Tensor(x,'float32', [1,11]);
+    let tensorX =new ort.Tensor('float32', x, [1,11]);
     let feeds = {float_input: tensorX};
 
     let session = await ort.InferenceSession.create ('xgboost_WineQuality_ort.onnx');

@@ -24,7 +24,7 @@ async function runExample(){
     let session = await ort.InferenceSession.create ('xgboost_WineQuality_ort.onnx');
 
 let result = await session. run (feeds);
-    let outputData =result. variable.data
+    let outputData =result. variable.data;
     outputData = parseFloat(outputData). toFixed(2)
     let predictions = document.getElementById('predictions');
 
